@@ -74,7 +74,7 @@ body{
     align-items: center;
 }
 
-.menu-lateral__link--ativo{
+.menu-lateral__link:hover{
     color: #FFFFFF;
     padding-left: 56px;
     border-left: 8px solid #FFFFFF;
@@ -119,6 +119,8 @@ body{
     display: grid;
     gap: 16px;
 }
+
+
 
 .titulo-pagina{
     font-size: 1.5rem;
@@ -226,6 +228,54 @@ body{
     display: grid;
     gap: 16px;
 }
+
+/* Pagina Picos.html */
+
+.cartao__botao--localizar:before{
+    content: "\e908";
+    font-size: 24px;
+}
+
+.cartao__picos{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 24px 16px;
+    gap: 16px;
+
+}
+
+.perfil__picos::before{
+    margin-right: 8px;
+    content: "";
+    width: 32px;
+    height: 32px;
+    background-image: url(../img/profile_2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.cartao__descricao--picos{
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 32px;
+color: #FFFFFF;
+grid-column: span 2;
+
+
+}
+
+.cartao__imagem--artigo{
+
+    width: 100%;
+    grid-column: span 2;
+
+}
+
+
 
 
 
