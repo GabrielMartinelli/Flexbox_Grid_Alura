@@ -74,6 +74,12 @@ body{
     align-items: center;
 }
 
+.menu-lateral__link--ativo {
+    color: #FFFFFF;
+    padding-left: 56px;
+    border-left: 8px solid #FFFFFF;
+}
+
 .menu-lateral__link:hover{
     color: #FFFFFF;
     padding-left: 56px;
@@ -120,8 +126,6 @@ body{
     gap: 16px;
 }
 
-
-
 .titulo-pagina{
     font-size: 1.5rem;
     font-weight: 700;
@@ -152,7 +156,7 @@ body{
 }
 
 .cartao__destaque{
-    grid-column: span 2;
+    grid-column: span 3;
 }
 
 .cartao__titulo{
@@ -236,13 +240,40 @@ body{
     font-size: 24px;
 }
 
-.cartao__picos{
+
+.titulo-picos-detalhes{
+    grid-column: span 2;
     display: grid;
     grid-template-columns: 1fr auto;
-    padding: 24px 16px;
     gap: 16px;
+    
+}
+
+
+.cartao__picos--visualizacao{
+    
+    display: flex;
+    justify-content: end;
+    color: #95999C;
+    align-items: center;
 
 }
+
+.cartao__picos--visualizacao::before{
+    content: "\e90f";
+    margin-right: 8px;
+}
+
+.perfil__picos{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 8px;
+    align-items: center;
+    color: #95999C;
+    grid-column: 1 / span 1;
+    justify-self: flex-start;
+}
+
 
 .perfil__picos::before{
     margin-right: 8px;
@@ -252,8 +283,10 @@ body{
     background-image: url(../img/profile_2.png);
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
 
 }
+
 
 .cartao__descricao--picos{
 
@@ -268,6 +301,10 @@ grid-column: span 2;
 
 }
 
+.cartao__destaque--picos{
+    grid-column: span 2;
+}
+
 .cartao__imagem--artigo{
 
     width: 100%;
@@ -275,8 +312,23 @@ grid-column: span 2;
 
 }
 
+.secao{
+    display: grid;
+    gap: 16px;
+}
+
+.secao-picos-detalhes{
+    display: none;
+}
 
 
+.picos__descricao{
+    display: grid;
+    padding: 8px;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+   
+}
 
 
 /* Versão Desktop com o mínimo de 1024 px */
@@ -354,6 +406,17 @@ grid-column: span 2;
         "comprar-camisas comprar-camisas comprar-camisas";
     }
 
+    .principal-picos-detalhes{
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        column-gap: 32px;
+        padding: 16px 60px;
+        grid-template-areas: 
+        "imagem-pincipal-picos imagem-pincipal-picos imagem-pincipal-picos" 
+        "titulo-cartao-picos-detalhes titulo-cartao-picos-detalhes titulo-cartao-picos-detalhes"
+        "descricao-picos descricao-picos descricao-picos";
+    }
+
     .titulo-secao{
         grid-column: span 4;
     }
@@ -428,9 +491,29 @@ grid-column: span 2;
         color: #95999C;
     }
 
+    .cartao__imagem--artigo{
+
+        border-radius: 25px;
+        margin-bottom: 0;
+        grid-area: imagem-pincipal-picos;
+    
+    }
+
+    .cartao__destaque--picos{
+        grid-area: titulo-cartao-picos-detalhes
+
+    }
+
     .secao{
         grid-template-columns: repeat(4, 1fr);
     }
+
+    .secao-picos-detalhes{
+        display: none;
+        grid-area: outros-picos;
+        
+    }
+    
     
 
 /*Definindo os nomes dos Grid-áera*/
@@ -448,6 +531,10 @@ grid-column: span 2;
     }
 
     .secao-videos-mais-vistos{
+        grid-area: secao-videos;
+    }
+
+    .secao-picos-mais-vistos{
         grid-area: secao-videos;
     }
 
