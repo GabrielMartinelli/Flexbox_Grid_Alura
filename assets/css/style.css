@@ -263,7 +263,6 @@ body{
 
 
 .cartao__picos--visualizacao{
-    
     display: flex;
     justify-content: end;
     color: #95999C;
@@ -347,6 +346,25 @@ grid-column: span 2;
     grid-template-columns: auto 1fr;
     gap: 16px;
    
+}
+
+/* Página vídeos */
+
+.cartao__videos--visualizacao{
+    display: flex;
+    justify-content: end;
+    color: #95999C;
+    align-items: center;
+
+}
+
+.cartao__video--visualizacao::before{
+    content: "\e90c";
+    margin-right: 8px;
+}
+
+.secao-outros-videos-similares{
+    display: none;
 }
 
 
@@ -436,6 +454,16 @@ grid-column: span 2;
         "picos-descicao picos-descicao outros-picos";
     }
 
+    .principal-videos-detalhes{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        column-gap: 32px;
+        padding: 16px 60px;
+        grid-template-areas: 
+        "imagem-pincipal-picos imagem-pincipal-picos outros-videos"
+        "picos-descicao picos-descicao outros-videos";
+    }
+
     .titulo-secao{
         grid-column: span 4;
     }
@@ -453,10 +481,6 @@ grid-column: span 2;
         display: grid;
     }
 
-    .cartao__botao--destaque{
-        grid-column: 1 / span 3;
-        padding: 16px 8px;
-    }
     .cartao--recentes{
         display: grid;
         grid-template-columns: auto 1fr;
@@ -549,6 +573,11 @@ grid-column: span 2;
         display: inline;
         grid-area: outros-picos;
     }
+
+    .secao-outros-videos-similares{
+        display: inline;
+        grid-area: outros-videos;
+    }
     
     .picos__descricao{
         grid-area: picos-descicao;
@@ -577,9 +606,18 @@ grid-column: span 2;
         margin-top: 8px;
     }
 
+    .cartao--videos--similares{
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+
     .titulo-picos-detalhes{
         gap: 8px;
         
+    }
+
+    .video-pagina-detalhes{
+        border-radius: 15px;
     }
     
 
